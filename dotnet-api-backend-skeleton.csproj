@@ -16,9 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
   </ItemGroup>
 <!-- Linux Build Fix for CORECLR https://github.com/dotnet/coreclr/issues/13542 -->
-  <!-- <PropertyGroup>
-  <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
-</PropertyGroup> -->
+  <PropertyGroup>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+  </PropertyGroup>
 
 <!-- Development -->
   <ItemGroup>

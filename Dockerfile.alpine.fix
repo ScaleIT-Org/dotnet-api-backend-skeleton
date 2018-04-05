@@ -1,0 +1,14 @@
+FROM microsoft/dotnet:2.1-sdk AS builder
+WORKDIR /src
+RUN dotnet new web \
+    && sed -i 's/Microsoft.AspNetCore.App/Microsoft.AspNetCore/g' *.csproj \
+    && dotnet publish -c Release -o /app
+
+FROM microsoft/dotnet:2.1-runtime-alpine
+RUN apk add --no-cache libuv \
+    && ln -s /usr/lib/libuv.so.1 /usr/lib/libuv.so
+    
+ENV ASPNETCORE_URLS http://+:80
+WORKDIR /app
+COPY --from=builder /app .
+ENTRYPOINT ["dotnet", "src.dll"]
