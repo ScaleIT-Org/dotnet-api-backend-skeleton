@@ -1,3 +1,4 @@
+# Warning, this is experimental and may not work
 FROM microsoft/dotnet:2.1-sdk AS builder
 WORKDIR /src
 RUN dotnet new web \
