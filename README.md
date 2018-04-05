@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ScaleIT-Org/media-ressources/master/logo/scaleit-logo.png" width="20%"/> 
 <img src="https://github.com/ScaleIT-Org/media-ressources/raw/master/logo/docker-dotnet-microsoft-scaleit.png" width="40%"/>
-
+<img src="https://github.com/ScaleIT-Org/media-ressources/raw/master/logo/scaleit-waben-ionic.png" width="15%"/>
 
 # Dotnet Core Backend Skeleton ![License](https://img.shields.io/github/license/ScaleIT-Org/dotnet-api-backend-skeleton.svg?link=https://github.com/ScaleIT-Org/dotnet-api-backend-skeleton/blob/master/LICENSE)
 
