@@ -17,7 +17,9 @@ FROM microsoft/dotnet:2.1-runtime-alpine AS deploy-env
 
 # Upgrade to newest packages
 RUN apk update && apk upgrade
-# RUN apk add libc6-compat libunwind
+# Install libuv dependency
+RUN apk add --no-cache libuv \
+ && ln -s /usr/lib/libuv.so.1 /usr/lib/libuv.so
 #Timezone
 RUN apk add tzdata && cp /usr/share/zoneinfo/UTC /etc/localtime
 RUN echo "UTC" > /etc/timezone
