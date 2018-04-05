@@ -1,5 +1,5 @@
-<img src="https://raw.githubusercontent.com/ScaleIT-Org/media-ressources/master/logo/scaleit-logo.png" width="50%"/>| <img src="https://github.com/ScaleIT-Org/media-ressources/raw/master/logo/docker-dotnet-microsoft-scaleit.png" />| <img src="https://github.com/ScaleIT-Org/media-ressources/raw/master/logo/scaleit-waben-ionic.png" width="50%"/>
---|--|--
+<img src="https://raw.githubusercontent.com/ScaleIT-Org/media-ressources/master/logo/scaleit-logo.png" width="50%"/>| <img src="https://github.com/ScaleIT-Org/media-ressources/raw/master/logo/docker-dotnet-microsoft-scaleit.png" />
+--|--
 
 # Dotnet Core Backend Skeleton ![License](https://img.shields.io/github/license/ScaleIT-Org/dotnet-api-backend-skeleton.svg?link=https://github.com/ScaleIT-Org/dotnet-api-backend-skeleton/blob/master/LICENSE)
 
@@ -12,7 +12,7 @@ Give it a try:
 
 Skeleton Functionality:
 
-1) Simple static serving via Kestrel (can be combined with the (Ionic App Skeleton)[https://github.com/ScaleIT-Org/ionic-app-skeleton])
+1) Simple static serving via Kestrel (can be combined with the [Ionic App Skeleton](https://github.com/ScaleIT-Org/ionic-app-skeleton))
 2) Dotnet Core 2.1 backend with C#
 
 ## Technology Stack
