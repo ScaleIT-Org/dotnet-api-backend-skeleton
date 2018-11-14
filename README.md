@@ -48,6 +48,34 @@ Alternatively use cherry picking (or patching):
     git cherry-pick d147423..2622049
     git cherry-pick d147423
     
+## Testing
+
+We also included a way for unit testing your code. This is especially useful for testing your APIs or business logic.
+
+To run all tests in the project:
+
+    dotnet test
+
+To run a single Test:
+
+    dotnet test --filter "FullyQualifiedName=dotnet_api_backend_skeleton.Test.MQTTServiceTest.TestOnlineConnection"
+
+Other useful arguments:
+* --no-build
+* --logger ( example `dotnet test --logger "trx;LogFileName=/var/folders/4w/5w1xz9n14wqg5jxvfpjbvf0h0000gp/T/test-explorer/0.trx"`)
+
+Useful Visual Studio Code extensions:
+* Test Explorer for C# (it will show console output of the test - unlike the standard test runner)
+
+Note: we had to add new directives in the project configuration (.csproj) to get the tests to run inside the same project. Otherwise you get a `error CS0017: Program has more than one entry point defined`, because the tests also have a main method.
+We therefore had to disable packaging (see [this great article](https://andrewlock.net/fixing-the-error-program-has-more-than-one-entry-point-defined-for-console-apps-containing-xunit-tests/) for details):
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+    +    <IsPackable>false</IsPackable>
+    +   <GenerateProgramFile>false</GenerateProgramFile>
+    </PropertyGroup>
+
 ## Health Check (Optional)
 
         #Build with healtcheck enabled

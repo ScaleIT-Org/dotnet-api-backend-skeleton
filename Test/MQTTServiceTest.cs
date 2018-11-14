@@ -8,11 +8,11 @@ namespace dotnet_api_backend_skeleton.Test
     {
         private readonly MQTTMessageLogic messageLogic;
 
-        public MQTTServiceTest() 
+        public MQTTServiceTest()
         {
-            messageLogic = new MQTTMessageLogic(); 
-        } 
-        
+            messageLogic = new MQTTMessageLogic();
+        }
+
         #region Sample_TestCode
         [Fact]
         // [Theory]
@@ -23,12 +23,13 @@ namespace dotnet_api_backend_skeleton.Test
         {
             //This does not use Mocks and will try to contact the server directly
             MQTTMessageLogic.TestMQTTConnectionWithPublicBroker();
-            Console.WriteLine("Mata");
+            Console.WriteLine("This line will print in the console out");
+            // System.Diagnostics.Debug.WriteLine("This line will be shown in debug mode");
             // Assert.True(false);
             // Assert.False(result, $"{value} should not be prime");
         }
         #endregion
-        
-      
+
+
     }
 }
