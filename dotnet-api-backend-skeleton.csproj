@@ -29,9 +29,9 @@
     <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
   </PropertyGroup>
 
-  <!-- Development -->
-  <ItemGroup>
+  <!-- Development Obsolete as of at least 2.1.500 -->
+  <!-- <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
-  </ItemGroup>
+  </ItemGroup> -->
 
 </Project>

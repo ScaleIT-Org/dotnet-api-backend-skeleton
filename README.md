@@ -55,10 +55,18 @@ We also included a way for unit testing your code. This is especially useful for
 To run all tests in the project:
 
     dotnet test
+    // no-build -> it's faster, we don't need to generate binaries when we test
+    dotnet test --no-build
 
 To run a single Test:
 
     dotnet test --filter "FullyQualifiedName=dotnet_api_backend_skeleton.Test.MQTTServiceTest.TestOnlineConnection"
+
+To list all test:
+
+    dotnet test -t -v=q
+
+You can also use `dotnet test --help` to look for other goodies.
 
 Other useful arguments:
 * --no-build
@@ -67,12 +75,12 @@ Other useful arguments:
 Useful Visual Studio Code extensions:
 * Test Explorer for C# (it will show console output of the test - unlike the standard test runner)
 
-Note: we had to add new directives in the project configuration (.csproj) to get the tests to run inside the same project. Otherwise you get a `error CS0017: Program has more than one entry point defined`, because the tests also have a main method.
-We therefore had to disable packaging (see [this great article](https://andrewlock.net/fixing-the-error-program-has-more-than-one-entry-point-defined-for-console-apps-containing-xunit-tests/) for details):
+Note: we had to add a new directive in the project configuration (.csproj) to get the tests to run inside the same project. Otherwise you get an `error CS0017: Program has more than one entry point defined`, because the tests also have a main method.
+We therefore had to disable generating a program file (see [this great article](https://andrewlock.net/fixing-the-error-program-has-more-than-one-entry-point-defined-for-console-apps-containing-xunit-tests/) for details):
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.0</TargetFramework>
-    +    <IsPackable>false</IsPackable>
+        <IsPackable>false</IsPackable>
     +   <GenerateProgramFile>false</GenerateProgramFile>
     </PropertyGroup>
 
