@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk AS build-env
+FROM microsoft/dotnet:2.2-sdk AS build-env
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -12,7 +12,7 @@ RUN dotnet publish -c Release -o out
 
 ##################
 # Production image 
-FROM microsoft/dotnet:2.1-runtime-alpine AS deploy-env
+FROM microsoft/dotnet:2.2-aspnetcore-runtime-alpine AS deploy-env
 # use aspnet core https://github.com/NileshGule/dotnet-2017/blob/master/DotNet2017/CoreWebAPI/Dockerfile
 
 # Upgrade to newest packages
